@@ -54,6 +54,7 @@ const addOrUpdateTask = () => {
     );
     isEditing = false;
     editTaskId = null;
+    addTaskBtn.textContent = 'Add Task'; // Reset button text to "Add Task"
   } else {
     const newTask = {
       id: Date.now(),
@@ -87,6 +88,7 @@ const editTask = (id) => {
   descriptionInput.value = task.description;
   isEditing = true;
   editTaskId = id;
+  addTaskBtn.textContent = 'Update Task'; // Change button text to "Update Task"
 };
 
 const saveAndRender = () => {
